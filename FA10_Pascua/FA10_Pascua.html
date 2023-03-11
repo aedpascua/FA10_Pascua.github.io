@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FA10_Pascua</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <p id="randomnumber"></p>
+  <p id="Breakdown"></p>
+  <script>
+    let text1 = "Randomly generated number: ";
+    let random = Math.ceil(Math.random() * 1000);
+    let result1 = text1.concat(random);
+    document.getElementById('randomnumber').innerHTML = result1;
+
+    var remainder = random % 100;
+    var remainder2 = (random % 100) % 10;
+    var hundred = random - remainder;
+    var tens = (Math.floor(random % 100)) - remainder2;
+    var ones = remainder2;
+    document.getElementById('Breakdown').innerHTML = "Breakdown: " + hundred + ", " + tens + ", " + ones;
+  </script>
+</body>
+
+</html>
